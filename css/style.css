@@ -112,7 +112,7 @@ a {
 }
 
 .weatherTitle {
-	font-size: 24px;
+	font-size: 30px;
 }
 
 .story {
@@ -177,14 +177,26 @@ a {
 #item8 {
 	grid-column: 1 / span 1;
 	grid-row: 4;
+	border-top: 1px solid #474342;
 	border-right: 1px solid #474342;
 	text-align: center;
 }
+
+.temp, .conditions {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 5px;
+}
+
 
 @media (max-width: 850px){
 	.paper {
 		width: 90vw;
 		margin: none;
+	}
+
+	.title {
+		line-height: 1;
 	}
 }
 
