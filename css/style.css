@@ -171,7 +171,7 @@ a {
 
 #item7 {
 	grid-column: 2 / span 2;
-
+	border-top: 1px solid #474342;
 }
 
 #item8 {
