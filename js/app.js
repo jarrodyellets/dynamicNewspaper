@@ -80,12 +80,15 @@ $(document).ready(function(){
         long,
       dataType: "jsonp",
       success: function(data){
-      	conditions = data.currently.summary;
-      	temp = Math.round(data.currently.apparentTemperature);
-      	$(".conditions").append(conditions);
-      	$(".temp").append(temp + String.fromCharCode(176) + "F");
-      	console.log(data);
+      	showWeather(data);
       }
 		});
+	}
+
+	function showWeather(data){
+		conditions = data.currently.summary;
+    temp = Math.round(data.currently.apparentTemperature);
+    $(".conditions").append(conditions);
+    $(".temp").append(temp + String.fromCharCode(176) + "F");
 	}
 })
