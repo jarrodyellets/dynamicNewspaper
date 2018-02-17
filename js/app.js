@@ -36,8 +36,8 @@ $(document).ready(function(){
 		for (let i = 1; i < newsArr[0].articles.length; i++){
 			index = i - 1;
 			let news = newsArr[0].articles[index]
-			if(news.urlToImage &&  news.description && news.source.id != "fox-news"){
-				if(count < 4){
+			if(news.description && news.source.id != "fox-news"){
+				if(count < 4  && news.urlToImage){
 					$(".image" + count).attr("src", news.urlToImage);
 				}
 				$(".storyTitle" + count).append(news.title);
@@ -83,7 +83,5 @@ $(document).ready(function(){
 		});
 	}
 
-
 	console.log(newsArr);
-
 })
