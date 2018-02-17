@@ -1,225 +1,311 @@
 body {
-	background: #487279;
-	font-family: 'Noto Serif', serif;
-	height: 100%;
+  background: #487279;
+  font-family: "Noto Serif", serif;
+  height: 100%;
 }
 
 a {
-	color: #474342;
-	text-decoration: none;
+  color: #3a362b;
+  text-decoration: none;
 }
 
 .paper {
-	position: relative;
-	width: 800px;
-	background: #eee8e8;
-	color: #474342;
-	border-radius: 2px;
-	margin: 20px auto;
-	padding-top: 10px;
-	padding-bottom: 5px;
-	-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.75);
+  position: relative;
+  width: 800px;
+  color: #3a362b;
+  border-radius: 2px;
+  margin: 20px auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background: rgba(205, 151, 105, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(205, 151, 105, 1) 0%,
+    rgba(234, 190, 141, 1) 5%,
+    rgba(250, 222, 192, 1) 16%,
+    rgba(250, 222, 192, 1) 79%,
+    rgba(234, 190, 141, 1) 92%,
+    rgba(205, 151, 105, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(205, 151, 105, 1)),
+    color-stop(5%, rgba(234, 190, 141, 1)),
+    color-stop(16%, rgba(250, 222, 192, 1)),
+    color-stop(79%, rgba(250, 222, 192, 1)),
+    color-stop(92%, rgba(234, 190, 141, 1)),
+    color-stop(100%, rgba(205, 151, 105, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(205, 151, 105, 1) 0%,
+    rgba(234, 190, 141, 1) 5%,
+    rgba(250, 222, 192, 1) 16%,
+    rgba(250, 222, 192, 1) 79%,
+    rgba(234, 190, 141, 1) 92%,
+    rgba(205, 151, 105, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(205, 151, 105, 1) 0%,
+    rgba(234, 190, 141, 1) 5%,
+    rgba(250, 222, 192, 1) 16%,
+    rgba(250, 222, 192, 1) 79%,
+    rgba(234, 190, 141, 1) 92%,
+    rgba(205, 151, 105, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(205, 151, 105, 1) 0%,
+    rgba(234, 190, 141, 1) 5%,
+    rgba(250, 222, 192, 1) 16%,
+    rgba(250, 222, 192, 1) 79%,
+    rgba(234, 190, 141, 1) 92%,
+    rgba(205, 151, 105, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(205, 151, 105, 1) 0%,
+    rgba(234, 190, 141, 1) 5%,
+    rgba(250, 222, 192, 1) 16%,
+    rgba(250, 222, 192, 1) 79%,
+    rgba(234, 190, 141, 1) 92%,
+    rgba(205, 151, 105, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#cd9769",
+      endColorstr="#cd9769",
+      GradientType=0
+    );
+}
+
+.paper:before,
+.paper:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  border-radius: 100px / 10px;
+}
+.paper:after {
+  right: 10px;
+  left: auto;
+  transform: skew(8deg) rotate(3deg);
 }
 
 .titleDiv {
-	position: relative;
+  position: relative;
+  background-image: url("http://www.jarrodyellets.com/images/globe.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .title {
-	text-align: center;
-	font-size: 4em;
-	text-align: center;
-	font-family: 'Gravitas One', cursive;
-	margin-bottom: 10px;
-	line-height: 2;
-	text-shadow: 4px 3px 0px #eee8e8, 9px 8px 0px rgba(0,0,0,0.15);
+  text-align: center;
+  font-size: 4em;
+  text-align: center;
+  font-family: "Gravitas One", cursive;
+  margin-bottom: 10px;
+  line-height: 2;
+  text-shadow: 4px 3px 0px #eabe8d, 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .topHr {
-	border: 3px solid #474342;
-	margin-top: 0;
-	margin-bottom: 3px;
+  border: 3px solid #3a362b;
+  margin-top: 0;
+  margin-bottom: 3px;
 }
 
 .bottomHr {
-	border: 1px solid #474342;
-	margin: 0;
+  border: 1px solid #3a362b;
+  margin: 0;
 }
 
 .aboutTitle {
-	position: relative;
-	text-transform: uppercase;
-	font-family: 'News Cycle', sans-serif;
-	font-size: 14px;
-	font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "News Cycle", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .vol {
-	position: absolute;
-	left: 5%;
+  position: absolute;
+  left: 5%;
 }
 
 .date {
-	text-align: center;
+  text-align: center;
 }
 
 .price {
-	position: absolute;
-	right: 5%;
-	top: 0;
+  position: absolute;
+  right: 5%;
+  top: 0;
 }
 
 .dateHr {
-	border: 2px solid #474342;
-	margin-top: 2px;
-	margin-bottom: 0;
+  border: 2px solid #3a362b;
+  margin-top: 2px;
+  margin-bottom: 0;
 }
 
 .content {
-	position: relative;
-	display: grid;
-	width: 100%;
-	grid-template-columns: repeat(3, 1fr)
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .item {
-	padding: 5px;
+  padding: 5px;
 }
 
 .storyTitle {
-	font-family: 'Oswald', sans-serif;
-	padding: 0 5%;
-	margin: 0;
-	font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  padding: 0 5%;
+  margin: 0;
+  font-size: 20px;
 }
 
 .storyTitle1 {
-	text-align: center;
-	font-size: 3em;
-	font-family: 'Oswald', sans-serif;
-	margin: 0;
-	padding: 0 5%;
+  text-align: center;
+  font-size: 3em;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0 5%;
 }
 
 .storyTitle2 {
-	font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 .storyTitle3 {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .weatherTitle {
-	font-size: 30px;
+  font-size: 30px;
 }
 
 .story {
-	padding: 0 5%;
-	font-size: 14px;
+  padding: 0 5%;
+  font-size: 14px;
 }
 
 .by {
-	font-size: 11px;
-	padding: 0 5%;
-	font-weight: bold;
-	text-transform: uppercase;
+  font-size: 11px;
+  padding: 0 5%;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .image {
-	display: block;
-	width: 90%;
-	margin: 0 auto;
-	border: solid 2px black;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	opacity: .6;
-	filter: grayscale(100%);
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border: solid 2px black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  filter: sepia(100%);
 }
 
 .image3 {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 #item1 {
-	grid-column: 1 / span 3;
-	border-bottom: 1px solid #474342;
+  grid-column: 1 / span 3;
+  border-bottom: 1px solid #474342;
 }
 
 #item2 {
-	grid-column: 1 / span 2;
-	grid-row: 2;
+  grid-column: 1 / span 2;
+  grid-row: 2;
 }
 
 #item3 {
-	grid-column: 3;
-	grid-row: 2 / 3;
-	border-left: 1px solid #474342;
+  grid-column: 3;
+  grid-row: 2 / 3;
+  border-left: 1px solid #474342;
 }
 
 #item4 {
-	border-right: 1px solid #474342;
+  border-right: 1px solid #474342;
 }
 
 #item6 {
-	grid-column: 3;
-	grid-row: 3 / 4;
-	border-left: 1px solid #474342;
+  grid-column: 3;
+  grid-row: 3 / 4;
+  border-left: 1px solid #474342;
 }
 
 #item7 {
-	grid-column: 2 / span 2;
-	border-top: 1px solid #474342;
+  grid-column: 2 / span 2;
+  border-top: 1px solid #474342;
 }
 
 #item8 {
-	grid-column: 1 / span 1;
-	grid-row: 4;
-	border-top: 1px solid #474342;
-	border-right: 1px solid #474342;
-	text-align: center;
+  grid-column: 1 / span 1;
+  grid-row: 4;
+  border-top: 1px solid #474342;
+  border-right: 1px solid #474342;
+  text-align: center;
 }
 
-.temp, .conditions {
-	font-size: 24px;
-	font-weight: bold;
-	margin: 5px;
+.temp,
+.conditions {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px;
 }
 
+@media (max-width: 850px) {
+  .paper {
+    width: 90vw;
+    margin: none;
+  }
 
-@media (max-width: 850px){
-	.paper {
-		width: 90vw;
-		margin: none;
-	}
+  .aboutTitle {
+    font-size: 12px;
+  }
 
-	.aboutTitle {
-		font-size: 12px;
-	}
-
-	.title {
-		line-height: 1;
-	}
+  .title {
+    line-height: 1;
+  }
 }
 
-@media (max-width: 600px){
-	body {
-		font-size: 10px;
-	}
+@media (max-width: 600px) {
+  body {
+    font-size: 10px;
+  }
 
-	.aboutTitle {
-		font-size: 10px;
-	}
-	
-	.content {
-		grid-template-rows: repeat(min-content, 1fr)
-	}
+  .aboutTitle {
+    font-size: 10px;
+  }
 
-	#item1, #item2, #item3, #item4, #item5, #item6, #item7, #item8 {
-		grid-column: 1 / -1;
-		grid-row: span 1;
-		border: none;
-	}
+  .content {
+    grid-template-rows: repeat(min-content, 1fr);
+  }
+
+  #item1,
+  #item2,
+  #item3,
+  #item4,
+  #item5,
+  #item6,
+  #item7,
+  #item8 {
+    grid-column: 1 / -1;
+    grid-row: span 1;
+    border: none;
+  }
 }
