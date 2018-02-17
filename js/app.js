@@ -39,17 +39,23 @@ $(document).ready(function(){
 			if(news.description && news.source.id != "fox-news"){
 				if(count < 4  && news.urlToImage){
 					$(".image" + count).attr("src", news.urlToImage);
+					printData(news);
+				} else if (count >= 4){
+					printData(news);
 				}
-				$(".storyTitle" + count).append(news.title);
-				$(".story" + count).append(news.description);
-				$(".by" + count).append("By: " + news.source.name)
-				$(".a" + count).attr("href", news.url);
-				count++;
 				if(count === 8){
 					return true;
 				}
 			}
 		}
+	}
+
+	function printData(news){
+		$(".storyTitle" + count).append(news.title);
+		$(".story" + count).append(news.description);
+		$(".by" + count).append("By: " + news.source.name)
+		$(".a" + count).attr("href", news.url);
+		count++;		
 	}
 
 	function getLocation(){
@@ -82,6 +88,4 @@ $(document).ready(function(){
       }
 		});
 	}
-
-	console.log(newsArr);
 })
