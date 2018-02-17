@@ -195,6 +195,10 @@ a {
 		margin: none;
 	}
 
+	.aboutTitle {
+		font-size: 12px;
+	}
+
 	.title {
 		line-height: 1;
 	}
@@ -204,6 +208,11 @@ a {
 	body {
 		font-size: 10px;
 	}
+
+	.aboutTitle {
+		font-size: 10px;
+	}
+	
 	.content {
 		grid-template-rows: repeat(min-content, 1fr)
 	}
