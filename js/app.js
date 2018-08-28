@@ -74,7 +74,7 @@ $(document).ready(function(){
 		 $.ajax({
       type: "GET",
       url:
-        "https://api.darksky.net/forecast/b93fc5ac7b57d5f5b1e06ee54c65b41c/" +
+        "https://api.darksky.net/forecast/3a616888226060540aaa82c98bfacdb9/" +
         lat +
         "," +
         long,
